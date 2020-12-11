@@ -1,0 +1,228 @@
+body {
+  background-color: blueviolet;
+}
+
+.container {
+  height: 600px;
+  width: 600px;
+  grid-template-rows: repeat(15, 1fr);
+  grid-template-columns: repeat(15, 1fr);
+  background-color: #000;
+  display: grid;
+  padding: 2px;
+  text-align: center;
+  margin: 0 auto;
+  grid-gap: 2px;
+}
+
+.red {
+  background-color: red;
+  grid-column: 1/span 6;
+  grid-row: 1/span 6;
+}
+.red-area {
+  grid-column: 1/span 6;
+  grid-row: 7/span 3;
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.green {
+  background-color: green;
+  grid-column: 10/span 6;
+  grid-row: 1/span 6;
+}
+.green-area {
+  grid-column: 7/span 3;
+  grid-row: 1/span 6;
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+
+.yellow {
+  grid-column: 10/span 6;
+  grid-row: 10/span 6;
+  background-color: yellow;
+}
+.yellow-area {
+  grid-column: 10/span 6;
+  grid-row: 7/span 3;
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.blue {
+  background-color: blue;
+  grid-column: 1/span 6;
+  grid-row: 10/span 6;
+}
+.blue-area {
+  grid-column: 7/span 3;
+  grid-row: 10/span 6;
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+}
+
+.central {
+  grid-row: 7/span 3;
+  grid-column: 7/span 3;
+}
+.central-red {
+  background-color: red;
+  clip-path: polygon(0 0, 50% 50%, 50% 50%, 0 100%);
+  z-index: 144;
+}
+.central-green {
+  background-color: green;
+  clip-path: polygon(0 0, 100% 0, 50% 50%, 50% 50%);
+  z-index: 14;
+}
+.central-yellow {
+  background-color: yellow;
+  clip-path: polygon(50% 50%, 100% 0, 100% 100%, 50% 50%);
+  z-index: 54;
+}
+.central-blue {
+  background-color: blue;
+  clip-path: polygon(50% 50%, 50% 50%, 100% 100%, 0 100%);
+  z-index: 44;
+}
+
+.cell {
+  background-color: #F5F5F5;
+}
+.cell-red {
+  background-color: red;
+}
+.cell-green {
+  background-color: green;
+}
+.cell-yellow {
+  background-color: yellow;
+}
+.cell-blue {
+  background-color: blue;
+}
+
+.room {
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+.room-red {
+  grid-row: 2/span 4;
+  grid-column: 2/span 4;
+}
+.room-green {
+  grid-row: 2/span 4;
+  grid-column: 11/span 4;
+}
+.room-yellow {
+  grid-row: 11/span 4;
+  grid-column: 11/span 4;
+  z-index: 2;
+}
+.room-blue {
+  grid-row: 11/span 4;
+  grid-column: 2/span 4;
+  z-index: 2;
+}
+.room-circle {
+  width: 40%;
+  height: 40%;
+  height: 40%;
+  width: 40%;
+  border-radius: 50%;
+}
+.room-circle-red {
+  background-color: red;
+}
+.room-circle-green {
+  background-color: green;
+}
+.room-circle-yellow {
+  background-color: yellow;
+}
+.room-circle-blue {
+  background-color: blue;
+}
+
+.star {
+  display: flex;
+  justify-content: center;
+  transform: translateY(50%);
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+.star-red {
+  background-image: linear-gradient(to right, #ff0000da, rgba(255, 0, 0, 0.815));
+  color: transparent;
+}
+.star-green {
+  background-image: linear-gradient(to right, #15ff00da, #008000);
+  color: transparent;
+}
+.star-yellow {
+  color: transparent;
+  background-image: linear-gradient(to right, #FBC02D, #FBC02D);
+}
+.star-blue {
+  background-image: linear-gradient(to right, blue, blue);
+  color: transparent;
+}
+
+h3 {
+  text-align: center;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.yellow, .blue {
+  position: relative;
+}
+
+.blue-name, .yellow-name {
+  position: absolute;
+  width: 10rem;
+  bottom: 0;
+  left: 0;
+  transform: translateX(25%);
+}
+
+.arrow {
+  height: 100%;
+  width: 100%;
+}
+
+.name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flag {
+  height: 1rem;
+  width: 1.6rem;
+  background-color: #fff;
+  margin-right: 1rem;
+}
+.flag img {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,28 @@
+@mixin room-adj {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;  
+}
+
+@mixin grid-temp-row($times, $fraction) {
+    grid-template-rows: repeat($times, $fraction);
+}
+@mixin grid-temp-col($times, $fraction) {
+    grid-template-columns: repeat($times, $fraction);
+}
+
+@mixin lb($width, $height) {
+   height: $height;
+   width: $width;
+}
+
+@mixin bg-img($first, $second) {
+    background-image: linear-gradient(to right, $first, $second);
+}
+
+@mixin bg-clip {
+    background-clip: text;
+    -webkit-background-clip: text;
+}
